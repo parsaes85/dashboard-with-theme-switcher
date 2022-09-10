@@ -1,0 +1,242 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+.website{
+    width: 80%;
+    margin: 0px auto;
+}
+header{
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+header .title h1{
+    color: hsl(230, 17%, 14%);
+    font-size: 1.7em;
+}
+header .title p{
+    color: hsl(228, 12%, 44%);
+    font-weight: 700;
+    font-size: .8em;
+}
+.btn{
+    display: flex;
+    text-align: center;
+}
+.btn p{
+    color: hsl(230, 22%, 74%);
+    font-weight: 700;
+    font-size: .9em;
+    margin-top: 2px;
+}
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 22px;
+    margin: 0px 10px;
+}
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: hsl(230, 22%, 76%);
+    transition: .4s;
+    border-radius: 34px;
+}
+.switch input{display: none;}
+.slider::before{
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 15px;
+    left: 4px;
+    bottom: 3.5px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+input:checked + .slider{
+    background-image: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+input:checked + .slider::before{
+    transform: translateX(21px);
+    background-color:hsl(228, 28%, 20%);
+}
+.stats{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    gap: 20px;
+}
+.stat{
+    background-color: hsl(227, 47%, 96%);
+    width: 23%;
+    height: 200px;
+    border-radius: 4px;
+    text-align: center;
+}
+.stat:hover{
+    background-color: hsl(227, 7%, 90%);
+}
+.stat-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.stat-title p{
+    font-size: .9em;
+    color: hsl(230, 17%, 14%);
+}
+.stat-title img{
+    height: 17px;
+    width: 17px;
+    margin-right: 6px;
+}
+.stat > h1{
+    font-size: 3em;
+    margin-top: 16px;
+    color: hsl(230, 17%, 13%);
+}
+.stat > p{
+    color: hsl(228, 12%, 44%);
+    font-size: .8em;
+    letter-spacing: 4px;
+}
+.stat-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+.stat-footer p{
+    color: hsl(163, 72%, 41%);
+    font-size: 0.8em;
+    margin-left: 5px;
+    font-weight: 700;
+}
+.stat:first-child{
+    border-top: 3px solid hsl(208, 92%, 53%);
+}
+.stat:nth-child(2){
+    border-top: 3px solid hsl(203, 89%, 53%);
+}
+.stat:nth-child(3){
+    border-top: 3px solid transparent;
+    border-image: linear-gradient(100deg,hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    border-image-slice: 1;
+}
+.stat:last-child{
+    border-top: 3px solid hsl(348, 97%, 39%);
+}
+.stat:last-child .stat-footer p{
+    color: hsl(356, 69%, 56%);
+}
+section > h1{
+    color: hsl(228, 12%, 40%);
+    margin-bottom: 15px;
+}
+.today-stats{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.today-stat{
+    background-color: hsl(227, 47%, 96%);
+    width: 23%;
+    height: 100px;
+    border-radius: 4px;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.today-stat:hover{
+    background-color: hsl(227, 7%, 90%);
+}
+.today-stat-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+.today-stat-title p{
+    color: hsl(228, 12%, 44%);
+    font-weight: 700;
+    font-size: .9em;
+}
+.today-stat-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.today-stat-footer > h1{
+    color: hsl(230, 17%, 13%);
+    font-size: 1.8em;
+}
+.today-stat-footer div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.today-stat-footer div p{
+    color: hsl(163, 72%, 41%);
+    font-weight: 700;
+    font-size: .8em;
+}
+.today-stat:nth-child(2) .today-stat-footer div p{
+    color: hsl(356, 69%, 56%);
+}
+.today-stat:nth-child(7) .today-stat-footer div p{
+    color: hsl(356, 69%, 56%);
+}
+.today-stat:last-child .today-stat-footer div p{
+    color: hsl(356, 69%, 56%);
+}
+
+
+@media only screen and (max-width:802px){
+    header{
+        flex-direction: column;
+    }
+    header .title h1{
+        font-size: 1.3em;
+    }
+    .title{
+        padding-bottom: 10px;
+    }
+    .btn{
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        border-top: 2px solid hsl(230, 22%, 90%);
+        padding-top: 10px;
+    }
+    .btn p{
+        color: hsl(230, 22%, 64%);
+    }
+    .stats{
+        flex-direction: column;
+    }
+    .stat{
+        width: 100%;
+    }
+    .today-stats{
+        flex-direction: column;
+    }
+    .today-stat{
+        width: 100%;
+    }
+}
